@@ -107,7 +107,6 @@ colabfold_visualization.ipynb
 **示例预测如下：**
 
 ![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
-![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/results_single/output/query1_pae.png)
 ---
 
 ## 🧰 项目结构
