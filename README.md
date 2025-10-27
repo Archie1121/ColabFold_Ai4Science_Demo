@@ -44,12 +44,12 @@ pip install colabfold nglview matplotlib seaborn numpy jupyterlab
 ```bash
 # 下载 ColabFold 所需参数（models）
 cd /home/u2024170925/Ai4Science-Demo/ColabFold_demo/databases
-wget https://github.com/sokrypton/ColabFold/releases/download/v1.0/params.tar.gz
-tar -xzf params.tar.gz
+wget https://storage.googleapis.com/alphafold/alphafold_params_2022-12-06.tar
+tar -xvf alphafold_params_2022-12-06.tar
 
 # 下载 UniRef50 数据库（用于 MSA 搜索）
-wget https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/by_organism/UniRef50.fasta.gz
-gunzip UniRef50.fasta.gz
+wget https://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref50/uniref50.fasta.gz
+gunzip /home/u2024170925/Ai4Science-Demo/ColabFold_demo/databases/uniref50.fasta.gz
 ```
 
 ---
