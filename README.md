@@ -103,7 +103,7 @@ bash run_single_sequence_with_msa.sh
 ```bash
 jupyter notebook
 ```
-
+![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
 ---
 
 ## 🧰 项目结构
@@ -142,4 +142,4 @@ ColabFold_demo/
 以及 AlphaFold 团队推动结构生物学进入 AI 新时代。
 
 > 如果这个 demo 对你有帮助，请 ⭐ 支持一下！
-```
+
