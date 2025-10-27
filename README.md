@@ -144,7 +144,6 @@ ColabFold_Ai4Science_Demo/
 感谢 [Sokrypton](https://github.com/sokrypton) 提供的 ColabFold 工具链，  
 以及 AlphaFold 团队推动结构生物学进入 AI 新时代。
 
-> 如果这个 demo 对你有帮助，请 ⭐ 支持一下！
 
 # 英文版：
 # 🧪 ColabFold Demo: Protein Structure Prediction & Visualization
