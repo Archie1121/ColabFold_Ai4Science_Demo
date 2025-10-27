@@ -297,8 +297,4 @@ This project is built upon the open-source framework [ColabFold](https://github.
 Special thanks to [Sokrypton](https://github.com/sokrypton) for providing the ColabFold toolkit,
 and to the AlphaFold team for advancing structural biology into the AI era.
 
-> If this demo helps you, please ⭐ the project and share your work!
-
-```
-
 
