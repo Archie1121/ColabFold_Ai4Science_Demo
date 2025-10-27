@@ -1,0 +1,7 @@
+# 忽略 params 文件夹下的 npy 文件
+databases/params/*.npz
+
+# 忽略 uniref50 数据集
+databases/uniref50.fasta
+
+ColabFold/test-data/
