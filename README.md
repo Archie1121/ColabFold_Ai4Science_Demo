@@ -146,3 +146,122 @@ ColabFold_Ai4Science_Demo/
 
 > 如果这个 demo 对你有帮助，请 ⭐ 支持一下！
 
+# 英文版：
+
+# 🧪 ColabFold Demo: Protein Structure Prediction & Visualization
+
+> A complete **AlphaFold2/ColabFold** offline workflow demonstration for protein structure prediction and visualization.  
+> Supports both single-sequence and MSA inputs, integrating **3D PDB visualization**, **PAE heatmap analysis**, and **static figure export**.
+
+---
+
+## 🌍 Project Overview
+This project is part of the Ai4Science course at HFUT (Hefei University of Technology), developed by **Team 16**: SiSi Liu, Xiao Liu, Xuelin Wang, Yichao He, and Mingxin Liu.  
+The code implementation was primarily completed by **Yichao He**.  
+
+This project builds a lightweight workflow for protein structure prediction and visualization based on **ColabFold** (the open-source implementation of AlphaFold2), including:
+
+- ✅ **Offline execution scripts** — run locally or on servers, no Google Colab required.  
+- ✅ **Full prediction pipeline** — from FASTA input → MSA search → structure prediction → result output.  
+- ✅ **Interactive 3D visualization** — view predicted structures in real time using `nglview` in Jupyter Notebook.  
+- ✅ **Automatic PNG export** — generate high-quality PDB and PAE plots for reports or papers.
+
+---
+
+## 🧩 Function Overview
+
+| Module | Description | Core Technologies |
+|--------|--------------|-------------------|
+| [run_single_sequence.sh](file://c:/Users/admin/Desktop/ColabFold_demo/run_single_sequence.sh) | Predict structure from a single sequence without MSA | ColabFold + AlphaFold2-ptm |
+| [run_single_sequence_with_msa.sh](file://c:/Users/admin/Desktop/ColabFold_demo/run_single_sequence_with_msa.sh) | Predict structure using pre-generated MSA | MMseqs2 / A3M input |
+| [colabfold_visualization.ipynb](file://c:/Users/admin/Desktop/ColabFold_demo/colabfold_visualization.ipynb) | Core visualization notebook | nglview, seaborn, matplotlib |
+
+---
+
+## ⚙️ Installation & Environment Setup
+
+### 1. Install dependencies (recommended: Conda)
+
+```bash
+# Create virtual environment
+conda create -n colabfold python=3.9
+conda activate colabfold
+```
+
+```bash
+# Install essential packages
+pip install colabfold nglview matplotlib seaborn numpy jupyterlab
+```
+
+```bash
+# Download ColabFold model parameters
+cd /home/u2024170925/Ai4Science-Demo/ColabFold_demo/databases
+wget https://github.com/sokrypton/ColabFold/releases/download/v1.0/params.tar.gz
+tar -xzf params.tar.gz
+```
+
+```bash
+# Download UniRef50 database (for MSA search)
+wget https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/by_organism/UniRef50.fasta.gz
+gunzip UniRef50.fasta.gz
+```
+
+```markdown
+---
+
+## 🚀 Quick Start
+
+### 1️⃣ Prepare Input Files
+
+Make sure the following files exist:
+
+```
+
+results_single/
+├── protein.fasta         # Single protein sequence (FASTA format)
+└── protein_msa.fasta     # Optional: precomputed MSA for higher accuracy
+
+````
+
+Example `protein.fasta` content:
+
+```fasta
+>query1
+MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVA
+````
+
+---
+
+### 2️⃣ Run Prediction (Two Modes)
+
+#### Mode 1: Single Sequence Only (Fast but Lower Accuracy)
+
+```bash
+bash run_single_sequence.sh
+```
+
+#### Mode 2: With MSA (Recommended for Higher Accuracy)
+
+```bash
+bash run_single_sequence_with_msa.sh
+```
+
+> ✅ The output will be saved in the `results_single/output/` directory, including:
+>
+> * `query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000.pdb`
+> * `query1_predicted_aligned_error_v1.json`
+
+---
+
+### 3️⃣ Visualize Results (Jupyter Notebook)
+
+Launch Jupyter and open `colabfold_visualization.ipynb`:
+
+```bash
+jupyter notebook
+colabfold_visualization.ipynb
+```
+
+**Example prediction shown below:**
+![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
+
