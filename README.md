@@ -148,6 +148,11 @@ ColabFold_Ai4Science_Demo/
 
 # 英文版：
 
+当然，这里是与你提供的中文版本**一一对应**、**可直接复制到 GitHub 的英文版 README.md**👇
+
+---
+
+````markdown
 # 🧪 ColabFold Demo: Protein Structure Prediction & Visualization
 
 > A complete **AlphaFold2/ColabFold** offline workflow demonstration for protein structure prediction and visualization.  
@@ -186,61 +191,56 @@ This project builds a lightweight workflow for protein structure prediction and 
 # Create virtual environment
 conda create -n colabfold python=3.9
 conda activate colabfold
-```
 
-```bash
 # Install essential packages
 pip install colabfold nglview matplotlib seaborn numpy jupyterlab
-```
+````
+
+### 2. Download models and databases
 
 ```bash
 # Download ColabFold model parameters
 cd /home/u2024170925/Ai4Science-Demo/ColabFold_demo/databases
 wget https://github.com/sokrypton/ColabFold/releases/download/v1.0/params.tar.gz
 tar -xzf params.tar.gz
-```
 
-```bash
 # Download UniRef50 database (for MSA search)
 wget https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/by_organism/UniRef50.fasta.gz
 gunzip UniRef50.fasta.gz
 ```
 
-```markdown
 ---
 
 ## 🚀 Quick Start
 
-### 1️⃣ Prepare Input Files
+### 1️⃣ Prepare input files
 
-Make sure the following files exist:
+Ensure the following files exist:
 
 ```
-
 results_single/
 ├── protein.fasta         # Single protein sequence (FASTA format)
-└── protein_msa.fasta     # Optional: precomputed MSA for higher accuracy
+└── protein_msa.fasta     # Optional: pre-generated MSA for higher accuracy
+```
 
-````
-
-Example `protein.fasta` content:
+Example of `protein.fasta`:
 
 ```fasta
 >query1
 MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVA
-````
+```
 
 ---
 
 ### 2️⃣ Run Prediction (Two Modes)
 
-#### Mode 1: Single Sequence Only (Fast but Lower Accuracy)
+#### Mode 1: Single-sequence only (fast but less accurate)
 
 ```bash
 bash run_single_sequence.sh
 ```
 
-#### Mode 2: With MSA (Recommended for Higher Accuracy)
+#### Mode 2: With MSA (recommended for higher accuracy)
 
 ```bash
 bash run_single_sequence_with_msa.sh
@@ -255,13 +255,56 @@ bash run_single_sequence_with_msa.sh
 
 ### 3️⃣ Visualize Results (Jupyter Notebook)
 
-Launch Jupyter and open `colabfold_visualization.ipynb`:
+Launch Jupyter and open the visualization notebook:
 
 ```bash
 jupyter notebook
 colabfold_visualization.ipynb
 ```
 
-**Example prediction shown below:**
-![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
+**Example prediction:**
+
+![Visualization Example](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
+
+---
+
+## 🧰 Project Structure
+
+```
+ColabFold_Ai4Science_Demo/
+├── ColabFold/                     # Core model and code dependencies
+├── databases/                     # Databases for MSA/model parameters
+├── results_single/                # Input/output directory for single-sequence predictions
+│   ├── output/                    # Output files (PDB, PAE, JSON, etc.)
+│   └── …                          # Input files before running (FASTA / MSA)
+├── .gitignore
+├── README.md                      # Project documentation
+├── colabfold_visualization.ipynb  # Jupyter Notebook visualization script
+├── run_single_sequence.sh         # Script for single-sequence prediction
+├── run_single_sequence_with_msa.sh# Script for MSA-based prediction
+└── visual.png                     # Example protein visualization
+```
+
+---
+
+## 📜 License & Citation
+
+This project is built upon the open-source framework [ColabFold](https://github.com/sokrypton/ColabFold) under the MIT License.
+
+> If used in academic publications, please cite the following works:
+>
+> * Jumper et al., *Nature* (2021): "Highly accurate protein structure prediction with AlphaFold"
+> * Elnaggar et al., *BioRxiv* (2022): "ColabFold: Fast and accurate protein structure prediction on Colab"
+
+---
+
+## ❤️ Acknowledgments
+
+Special thanks to [Sokrypton](https://github.com/sokrypton) for providing the ColabFold toolkit,
+and to the AlphaFold team for advancing structural biology into the AI era.
+
+> If this demo helps you, please ⭐ the project and share your work!
+
+```
+
 
