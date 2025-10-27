@@ -147,12 +147,6 @@ ColabFold_Ai4Science_Demo/
 > 如果这个 demo 对你有帮助，请 ⭐ 支持一下！
 
 # 英文版：
-
-当然，这里是与你提供的中文版本**一一对应**、**可直接复制到 GitHub 的英文版 README.md**👇
-
----
-
-````markdown
 # 🧪 ColabFold Demo: Protein Structure Prediction & Visualization
 
 > A complete **AlphaFold2/ColabFold** offline workflow demonstration for protein structure prediction and visualization.  
