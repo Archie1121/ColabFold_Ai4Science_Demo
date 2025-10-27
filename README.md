@@ -102,7 +102,10 @@ bash run_single_sequence_with_msa.sh
 
 ```bash
 jupyter notebook
+colabfold_visualization.ipynb
 ```
+**示例预测如下：**
+
 ![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
 ---
 
