@@ -92,7 +92,7 @@ bash run_single_sequence_with_msa.sh
 > ✅ 输出将保存在 `results_single/output/` 目录下，包括：
 >
 > - `query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000.pdb`
-> - `query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000_predicted_aligned_error_v1.json`
+> - `query1_predicted_aligned_error_v1.json`
 
 ---
 
@@ -106,6 +106,7 @@ colabfold_visualization.ipynb
 ```
 **示例预测如下：**
 
+![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
 ![可视化示例](https://github.com/Archie1121/ColabFold_Ai4Science_Demo/blob/master/visual.png)
 ---
 
