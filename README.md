@@ -112,18 +112,18 @@ colabfold_visualization.ipynb
 ## 🧰 项目结构
 
 ```
-ColabFold_demo/
-├── results_single/
-│   ├── protein.fasta
-│   └── output/
-│       ├── query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000.pdb
-│       └── query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000_predicted_aligned_error_v1.json
-├── visualization/
-│   ├── query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000_pdb.png
-│   └── query1_unrelaxed_rank_001_alphafold2_ptm_model_1_seed_000_pae.png
-├── run_single_sequence.sh
-├── run_single_sequence_with_msa.sh
-└── colabfold_visualization.ipynb
+ColabFold_Ai4Science_Demo/
+├── ColabFold/                     # 模型及代码依赖子目录
+├── databases/                     # 用于 MSA/模型的数据库文件夹
+├── results_single/                # 单序列预测结果输入／输出目录
+│   ├── output/                    # 输出文件（PDB、PAE、JSON 等）
+│   └── …                          # 脚本运行前的输入（如 FASTA／MSA）
+├── .gitignore
+├── README.md                      # 项目说明文档
+├── colabfold_visualization.ipynb  # Jupyter Notebook 可视化脚本
+├── run_single_sequence.sh         # 单序列预测脚本
+├── run_single_sequence_with_msa.sh# 使用 MSA 的预测脚本
+└── visual.png                     # 蛋白质预测图
 ```
 
 ---
